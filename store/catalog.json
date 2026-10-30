@@ -1,0 +1,48 @@
+{
+  "_notes": "Prices in USD. Costs are estimates (Printful base Sept 2026 + US first-item shipping); printful_sync.py prints live costs so we can re-check margins. Etsy fees ~10% (6.5% transaction + 3%+$0.25 processing + $0.20 listing).",
+  "products": {
+    "tee": {
+      "printful_product_id": 71,
+      "label": "Bella+Canvas 3001 Unisex Tee",
+      "colors": ["Black"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "retail": 29.99, "retail_2xl_plus": 32.99,
+      "est_cost": 12.95, "est_ship": 4.69
+    },
+    "hoodie": {
+      "printful_product_id": 146,
+      "label": "Gildan 18500 Hoodie",
+      "colors": ["Black"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "retail": 54.99, "retail_2xl_plus": 58.99,
+      "est_cost": 24.5, "est_ship": 8.49
+    }
+  },
+  "designs": {
+    "likkle-but-tallawah":   {"title": "Wi Likkle But Wi Tallawah Shirt | Jamaican Pride Tee | Jamaica Gift", "products": ["tee", "hoodie"]},
+    "christmas-breeze":      {"title": "Christmas Breeze A Blow Shirt | Jamaican Christmas Tee | Sorrel Black Cake", "products": ["tee", "hoodie"], "seasonal": "christmas"},
+    "grand-market-2026":     {"title": "Grand Market 2026 Shirt | Jamaican Christmas Eve Tee", "products": ["tee"], "seasonal": "christmas"},
+    "mi-deh-yah":            {"title": "Mi Deh Yah Shirt | Funny Jamaican Patois Tee", "products": ["tee", "hoodie"]},
+    "yaad-heart":            {"title": "Yaad Is Where The Heart Is | Jamaican Diaspora Hoodie", "products": ["tee", "hoodie"]},
+    "black-cake-supervisor": {"title": "Black Cake Supervisor Shirt | Funny Jamaican Christmas Gift for Mom", "products": ["tee", "hoodie"], "seasonal": "christmas"},
+    "roots-brooklyn":        {"title": "Jamaican Roots Brooklyn Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-bronx":           {"title": "Jamaican Roots The Bronx Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-toronto":         {"title": "Jamaican Roots Toronto Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-london":          {"title": "Jamaican Roots London Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-miami":           {"title": "Jamaican Roots Miami Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-birmingham":      {"title": "Jamaican Roots Birmingham Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-atlanta":         {"title": "Jamaican Roots Atlanta Raised Shirt", "products": ["tee", "hoodie"]},
+    "roots-hartford":        {"title": "Jamaican Roots Hartford Raised Shirt", "products": ["tee", "hoodie"]}
+  },
+  "group_orders": {
+    "_notes": "Personalised family/church/alumni shirts, quoted and invoiced directly (Stripe payment link), fulfilled as one Printful order. Template: designs/generate.py family_reunion().",
+    "price_tiers": [{"min_qty": 6, "tee": 27.0}, {"min_qty": 12, "tee": 25.0}, {"min_qty": 25, "tee": 23.0}],
+    "free_shipping_min_qty": 12
+  },
+  "promotions": [
+    {"name": "Early Christmas", "dates": "Nov 1-20", "offer": "Free US shipping on 2+ items"},
+    {"name": "Black Friday-Cyber Monday", "dates": "Nov 26-Dec 1", "offer": "20% off sitewide (Etsy sale) + bundle tee+hoodie $79"},
+    {"name": "Last call before Christmas", "dates": "Dec 2-12", "offer": "15% off, cutoff countdown in listings and posts"},
+    {"name": "Grand Market / Boxing Day", "dates": "Dec 20-31", "offer": "Gift-card style digital voucher + New Year drop"}
+  ]
+}
